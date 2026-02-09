@@ -611,6 +611,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -691,8 +718,8 @@
 <p>GHL Name: <code>Won - Moved To</code></p>
 <p>GHL Location: <code>Pipeline: Agents - New Lead / Pipeline Stage: Lost</code></p>
 <h2 id="automation-goal">Automation Goal</h2>
-<p>The goal of the automation is to mark an agent lead as won when its stage gets changed to <code>won</code>.</p>
-<p>It achieves this by removing <code>rea lead</code> tag and adding <code>rea current</code> along with removing from the <a href="\automations\campaigns\agents\first-contact"><code>Agents - First Contact</code></a> automation.</p>
+<p>The goal of the automation is to mark an agent lead as won when its stage gets changed to won.</p>
+<p>It achieves this by removing <a href="\tags#rea-lead"><code>rea lead</code></a> &amp; <a href="\tags#rea-lost"><code>rea lost</code></a> tags and adding <a href="\tags#rea-current"><code>rea current</code></a> along with removing from the <a href="\automations\campaigns\agents\first-contact"><code>Agents - First Contact</code></a> automation.</p>
 <h2 id="automation-process-simplified">Automation Process Simplified</h2>
 <pre class="mermaid"><code>flowchart TD
     A[Pipeline Stage Changed To Won]:::orange;
@@ -709,17 +736,20 @@
 <pre class="mermaid"><code>%%{init: {"flowchart": {"htmlLabels": true, "useMaxWidth": false}} }%%
 flowchart TD
     A["Pipeline Stage Changed
-    &lt;a href='\automations\campaigns\agents\first-contact'&gt;In Pipeline: Agents - New Lead&lt;/a&gt;
-    &lt;a href='\automations\campaigns\agents\first-contact'&gt;Pipeline Stage: Won&lt;/a&gt;
+        &lt;a href='\pipelines'&gt;In Pipeline: Agents - New Lead&lt;/a&gt;
+        &lt;a href='\pipelines\#agents-new-lead-won'&gt;Pipeline Stage: Won&lt;/a&gt;
     "]:::orange;
-    B[Remove Tags:
-    rea lead
-    rea lost]:::orange;
-    C[Add Tags:
-    rea current]:::orange;
-    D[Remove from Workflows:
-    Won - Moved To
-    Agents - First Contact]:::orange;
+    B["Remove Tags:
+        &lt;a href='\tags\#rea-lead'&gt;rea lead&lt;/a&gt;
+        &lt;a href='\tags\#rea-lost'&gt;rea lost&lt;/a&gt;
+    "]:::orange;
+    C["Add Tags:
+        &lt;a href='\tags\#rea-current'&gt;rea current&lt;/a&gt;
+    "]:::orange;
+    D["Remove from Workflows:
+        &lt;a href='\automations\agents\lead-won'&gt;Won - Moved To&lt;/a&gt;
+        &lt;a href='\automations\campaigns\agents\first-contact'&gt;Agents - First Contact
+    "]:::orange;
 
     A --&gt; B
     B --&gt; C
