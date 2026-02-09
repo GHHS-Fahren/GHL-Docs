@@ -7,6 +7,7 @@ nav:
     - Campaigns:
       - Agents:
         - First Contact: automations\campaigns\agents\first-contact.md
+  - Tags: tags.md
 theme:
   name: material
   palette:
