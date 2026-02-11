@@ -16,14 +16,14 @@ theme:
       toggle:
         icon: material/weather-night
         name: Light Mode
-      primary: deep orange
+      primary: light blue
       accent: purple
     # Dark mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Dark Mode
-      primary: deep orange
+      primary: light blue
       accent: purple
   
 markdown_extensions:
