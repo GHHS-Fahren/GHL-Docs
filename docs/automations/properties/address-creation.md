@@ -1,5 +1,5 @@
 <!--   This page is a template for a page explaining a automation workflow   -->
-# [[Automation Name]]
+# Address Creation Form
 
 The goal of the automation is to [[Automation Goal]]
 
@@ -9,12 +9,10 @@ It achieves this by [[Automation Simplified Steps]]
 
 ```mermaid
 flowchart TD
-    A[Stage A]:::colour;
-    B[Stage B]:::colour;
-    C[Stage C]:::colour;
+    submitted[Sales Submits Address Creation Form]:::colour
+    create-address[Create Address Record to No Owner]:::colour
 
-    A --> B
-    B --> C
+    submitted --> create-address
 
     classDef colour fill:#02A6F2,stroke-width:0px;
 ```

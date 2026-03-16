@@ -2,12 +2,39 @@ site_name: GoHighLevel Docs
 nav:
   - Home: index.md
   - Automations:
+    - Privates:
+      - New Lead: automations\privates\new-lead.md
+      - Lead Won: automations\privates\lead-won.md
+      - Lead Lost: automations\privates\lead-lost.md
+      - Lead Quoted: automations\privates\lead-quoted.md
+      - Job Complete: automations\privates\job-complete.md
     - Agents:
+      - New Lead: automations\agents\new-lead.md
       - Lead Won: automations\agents\lead-won.md
+      - Lead Lost: automations\agents\lead-lost.md
+    - Strata/Body Corp:
+      - New Lead: automations\body-corp\new-lead.md
+      - Lead Won: automations\body-corp\lead-won.md
+      - Lead Lost: automations\body-corp\lead-lost.md
+      - Lead Quoted: automations\body-corp\lead-quoted.md
+    - Properties:
+      - Address Attached to Opportunity: automations\properties\address-attached.md
+      - Address Created: automations\properties\address-creation.md
+      - Annual Compliance: automations\properties\annual-comp.md
     - Campaigns:
       - Agents:
         - First Contact: automations\campaigns\agents\first-contact.md
+      - Privates:
+        - Cold Lead: automations\campaigns\privates\cold-lead.md
+      - Schools:
+        - Fundraiser Campaign: automations\campaigns\schools\fundraiser-campaign.md
+  - Pipelines:
+    - Agents: pipelines\agents.md
+    - Privates: pipelines\privates.md
+    - Strata/Body Corp: pipelines\schools-campaign.md
+    - Schools Campaign: pipelines\strata-body-corp.md
   - Tags: tags.md
+
 theme:
   name: material
   palette:
@@ -40,3 +67,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - pymdownx.details
+  - attr_list
+
+plugins:
+  - glightbox

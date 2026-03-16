@@ -1,21 +1,18 @@
-# Agent Lead Won
+<!--   This page is a template for a page explaining a automation workflow   -->
+# Agents Lead Won
 
-The goal of the automation is to mark an agent lead as won when its stage gets changed to won.
+This automation handles the successful closing and tagging transition for opportunities moving into the [`Won`](\pipelines\agents\#pipeline-stages) stage within the [`Agent: New Lead pipeline`](\pipelines\agents).
 
-It achieves this by removing [`rea lead`](\tags\#rea-lead) & [`rea lost`](\tags\#rea-lost) tags and adding [`rea current`](\tags\#rea-current) along with removing from the [`Agents - First Contact`](\automations\campaigns\agents\first-contact) automation.
-
-## <!-- Padding so the chart isnt so close to the text -->
+# <!-- Padding so the chart isnt so close to the text -->
 
 ```mermaid
 flowchart TD
-    A[Opportunity Moved to Won]:::colour;
-    B[Remove Tags For Leads and Lost]:::colour;
-    C[Add REA Current Tag]:::colour;
-    D[Remove from First Contact Emails]:::colour;
+    opp-moved[Opportunity Moved to Won]:::colour;
+    del-tags[Remove Lead Tags & Add REA Current]:::colour;
+    rem-camp[Remove From First Contact Campaign]:::colour;
 
-    A --> B
-    B --> C
-    C --> D
+    opp-moved --> del-tags
+    del-tags --> rem-camp
 
     classDef colour fill:#02A6F2,stroke-width:0px;
 ```

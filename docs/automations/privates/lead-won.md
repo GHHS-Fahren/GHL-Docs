@@ -1,5 +1,5 @@
 <!--   This page is a template for a page explaining a automation workflow   -->
-# [[Automation Name]]
+# Privates Lead Won
 
 The goal of the automation is to [[Automation Goal]]
 
@@ -9,12 +9,10 @@ It achieves this by [[Automation Simplified Steps]]
 
 ```mermaid
 flowchart TD
-    A[Stage A]:::colour;
-    B[Stage B]:::colour;
-    C[Stage C]:::colour;
+    opp-moved[Opportunity Moved to Won]:::colour
+    upd-opp[Mark Opportunity Status as Won]:::colour
 
-    A --> B
-    B --> C
+    opp-moved --> upd-opp
 
-    classDef colour fill:#02A6F2,stroke-width:0px;
+    classDef colour fill:#02A6F2,stroke-width:0px
 ```
